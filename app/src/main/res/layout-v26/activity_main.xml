@@ -99,7 +99,7 @@
             android:id="@+id/Newusertext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New User ?"
+            android:text="@string/new_user"
             android:textColor="#101111"
             android:textSize="20dp" />
 
@@ -108,7 +108,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:textSize="24sp" />
 
 

@@ -12,11 +12,11 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
+        <TextView
             android:id="@+id/Register"
             android:layout_width="180dp"
             android:layout_height="100dp"
-            android:src="@drawable/register"
+
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
 
