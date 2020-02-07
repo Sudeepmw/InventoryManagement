@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View_Items" />
         <activity android:name=".User_Dashboard2" />
         <activity android:name=".User_Dashboard" />
         <activity android:name=".MainScreen">
