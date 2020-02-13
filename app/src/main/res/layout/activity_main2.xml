@@ -7,9 +7,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#3BDAD4"
+        android:orientation="vertical">
 
 
         <TextView
@@ -38,14 +39,14 @@
 
         <EditText
             android:id="@+id/Name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="13dp"
             android:hint="Enter Your Name"
             android:padding="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:textColorHint="#C5BFC2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColorHint="#C5BFC2" />
 
 
         <TextView
@@ -59,18 +60,15 @@
 
         <EditText
             android:id="@+id/Phone_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="13dp"
             android:hint="Phone Number"
             android:inputType="number"
             android:padding="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:textColorHint="#C5BFC2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-
+            android:textColorHint="#C5BFC2" />
 
 
         <TextView
@@ -84,14 +82,14 @@
 
         <EditText
             android:id="@+id/UserName_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="13dp"
             android:hint="User Name"
             android:padding="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:textColorHint="#C5BFC2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColorHint="#C5BFC2" />
 
         <TextView
             android:id="@+id/Password"
@@ -105,15 +103,16 @@
 
         <EditText
             android:id="@+id/Password_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="13dp"
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:textColorHint="#C5BFC2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColorHint="#C5BFC2" />
+
         <TextView
             android:id="@+id/Email"
             android:layout_width="wrap_content"
@@ -125,14 +124,14 @@
 
         <EditText
             android:id="@+id/Email_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="13dp"
             android:hint="Email Id"
             android:padding="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:textColorHint="#C5BFC2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColorHint="#C5BFC2" />
 
 
         <Button
