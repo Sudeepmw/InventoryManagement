@@ -4,4 +4,5 @@
     <string name="login">Login</string>
     <string name="new_user">New User ?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="title_activity_vieworders">vieworders</string>
 </resources>
