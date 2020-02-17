@@ -35,7 +35,6 @@ public class UserLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userloin);
-        //getSupportActionBar().hide();
 
         getSupportActionBar().setTitle("User Login");
 
@@ -64,8 +63,6 @@ public class UserLoginActivity extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             /*   Intent intent=new Intent(UserLoginActivity.this, UserDashBoardActivity.class);
-                startActivity(intent);*/
 
                 if(et_USERNAME.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(),"Enter your User Name",Toast.LENGTH_LONG).show();
@@ -91,38 +88,6 @@ public class UserLoginActivity extends AppCompatActivity {
         btn_add.setTypeface(basicdt);
 
     }
-    private void submitData(){
-        String str=et_USERNAME.getText().toString();
-        String str1=et_PWD.getText().toString();
 
-        progressDialog = new ProgressDialog(UserLoginActivity.this);
-        progressDialog.setMessage("Loading....");
-        progressDialog.show();
-
-        EndPointUrl service = RetrofitInstance.getRetrofitInstance().create(EndPointUrl.class);
-        Call<ResponseData> call = service.user_login(str,str1);
-        call.enqueue(new Callback<ResponseData>() {
-            @Override
-            public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
-                progressDialog.dismiss();
-                if(response.body().status.equals("true")){
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    String uname = et_USERNAME.getText().toString();
-                    editor.putString("user_name",uname);
-                    editor.commit();
-
-                    startActivity(new Intent(getApplicationContext(), UserOrderSettingsDashBoardActivity.class));
-                    finish();
-                }else{
-                    Toast.makeText(UserLoginActivity.this,response.body().message,Toast.LENGTH_LONG).show();
-                }
-
-            }
-            @Override
-            public void onFailure(Call<ResponseData> call, Throwable t) {
-                progressDialog.dismiss();
-                Toast.makeText(UserLoginActivity.this,t.getMessage(),Toast.LENGTH_LONG).show();
-            }
-        });
     }
 }
