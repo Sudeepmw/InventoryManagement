@@ -17,7 +17,7 @@
         android:textColor="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/button1_rounded" />
+        android:background="@drawable/button_image1" />
 
 
     <Button
@@ -31,6 +31,6 @@
         android:textColor="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/button1_rounded" />
+        android:background="@drawable/button_image1" />
 
 </LinearLayout>
