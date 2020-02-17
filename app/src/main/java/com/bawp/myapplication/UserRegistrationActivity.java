@@ -43,22 +43,6 @@ public class UserRegistrationActivity extends AppCompatActivity {
         et_email = (EditText) findViewById(R.id.et_email);
         et_restaurent= (EditText) findViewById(R.id.et_restaurent);
 
-        Typeface fontstyle=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
-        tv1.setTypeface(fontstyle);
-        tv2.setTypeface(fontstyle);
-        tv4.setTypeface(fontstyle);
-        tv5.setTypeface(fontstyle);
-        btn_reg.setTypeface(fontstyle);
-        et_name.setTypeface(fontstyle);
-        et_phno.setTypeface(fontstyle);
-        et_uname.setTypeface(fontstyle);
-        et_password.setTypeface(fontstyle);
-        et_email.setTypeface(fontstyle);
-        tv3.setTypeface(fontstyle);
-        et_restaurent.setTypeface(fontstyle);
-        tv_restaurent.setTypeface(fontstyle);
-
-
 
     }
 

@@ -11,7 +11,6 @@
     <TextView
         android:id="@+id/tv_username"
         android:text="Username"
-        android:drawableLeft="@drawable/username"
         android:textSize="20dp"
         android:layout_gravity="left"
         android:layout_marginLeft="30dp"
@@ -43,7 +42,6 @@
     <TextView
         android:id="@+id/tv_password"
         android:text="Password"
-        android:drawableLeft="@drawable/password"
         android:layout_gravity="left"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="23dp"

@@ -15,7 +15,7 @@
         android:textColor="#131212"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@drawable/button1_rounded" />
+        android:background="@drawable/button_image1" />
 
     <Button
         android:id="@+id/btn_settings"
@@ -27,7 +27,7 @@
         android:textColor="#131212"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@drawable/button1_rounded" />
+        android:background="@drawable/button_image1" />
 
 
 

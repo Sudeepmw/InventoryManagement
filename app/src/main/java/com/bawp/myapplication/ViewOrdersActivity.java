@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-import java.util.ArrayList;
-import java.util.List;
 
 
 
@@ -34,7 +32,7 @@ public class ViewOrdersActivity extends AppCompatActivity {
         list_view=(ListView)findViewById(R.id.list_view);
 
 
-        a1= new ArrayList<>();;
+       // Font Styles to be added
 
     }
 

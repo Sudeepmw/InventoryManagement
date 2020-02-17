@@ -32,13 +32,8 @@ public class AdminOrderSettingsDashBoardActivity extends AppCompatActivity {
             }
         });
 
-        btn_settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AdminOrderSettingsDashBoardActivity.this,AdminSettingsDashboard.class);
-                startActivity(intent);
-            }
-        });
+        //Intent Code to be written
+        // By Sudee
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

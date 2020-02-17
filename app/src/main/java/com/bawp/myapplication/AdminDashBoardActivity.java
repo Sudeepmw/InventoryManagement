@@ -46,46 +46,8 @@ public class AdminDashBoardActivity extends AppCompatActivity {
             }
         });
 
-
-        cd_pending_orders.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this, OutOfStockItemsActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-        cd_develer_orders.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this, DeliveredItemsActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-
-        btn_add_items.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this,AddItemsActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-        btn_update_items.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this,UpdateItemsActivity.class);
-                startActivity(intent);
-
-            }
-        });
+    //Intent activity to be written
+        // Dinesh Will complete the java code
     }
 
     @Override

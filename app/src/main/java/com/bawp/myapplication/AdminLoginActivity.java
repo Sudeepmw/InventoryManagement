@@ -14,14 +14,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.inventorymanagementsystem.EndPointUrl;
-import com.inventorymanagementsystem.ResponseData;
-import com.inventorymanagementsystem.RetrofitInstance;
-import com.inventorymanagementsystem.Utils;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class AdminLoginActivity extends AppCompatActivity {
@@ -42,19 +35,6 @@ public class AdminLoginActivity extends AppCompatActivity {
        sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
 
 
-        tv_username=(TextView)findViewById(R.id.tv_username);
-        tv_password=(TextView)findViewById(R.id.tv_password);
-        tv_forgetpwd=(TextView)findViewById(R.id.tv_forgetpwd);
-        tv_newuser=(TextView)findViewById(R.id.tv_newuser);
-        tv_signup=(TextView)findViewById(R.id.tv_signup);
-        tv_signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AdminLoginActivity.this, AdminRegistrationActivity.class);
-                 startActivity(intent);
-
-            }
-        });
 
 
         et_USERNAME=(EditText) findViewById(R.id.et_USERNAME);
@@ -80,49 +60,9 @@ public class AdminLoginActivity extends AppCompatActivity {
             }
         });
 
-        Typeface basicdt=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
-        tv_username.setTypeface(basicdt);
-        tv_password.setTypeface(basicdt);
-        tv_forgetpwd.setTypeface(basicdt);
-        tv_newuser.setTypeface(basicdt);
-        tv_signup.setTypeface(basicdt);
-        et_PWD.setTypeface(basicdt);
-        btn_add.setTypeface(basicdt);
 
     }
-    private void submitData(){
-        String str=et_USERNAME.getText().toString();
-        String str1=et_PWD.getText().toString();
 
-        progressDialog = new ProgressDialog(AdminLoginActivity.this);
-        progressDialog.setMessage("Loading....");
-        progressDialog.show();
-
-        EndPointUrl service = RetrofitInstance.getRetrofitInstance().create(EndPointUrl.class);
-        Call<ResponseData> call = service.admin_login(str,str1);
-        call.enqueue(new Callback<ResponseData>() {
-            @Override
-            public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
-                progressDialog.dismiss();
-                if(response.body().status.equals("true")){
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    String uname = et_USERNAME.getText().toString();
-                    editor.putString("user_name",uname);
-                    editor.commit();
-
-                    startActivity(new Intent(getApplicationContext(), AdminOrderSettingsDashBoardActivity.class));
-                    finish();
-                }else{
-                    Toast.makeText(AdminLoginActivity.this,response.body().message,Toast.LENGTH_LONG).show();
-                }
-
-            }
-            @Override
-            public void onFailure(Call<ResponseData> call, Throwable t) {
-                progressDialog.dismiss();
-                Toast.makeText(AdminLoginActivity.this,t.getMessage(),Toast.LENGTH_LONG).show();
-            }
-        });
 
 
 

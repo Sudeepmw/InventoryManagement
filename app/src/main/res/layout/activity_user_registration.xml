@@ -21,7 +21,6 @@
 
     <EditText
         android:id="@+id/et_name"
-        android:background="@drawable/edittext_rounded"
         android:hint="Enter Your Name"
         android:padding="13dp"
         android:layout_marginTop="4dp"
@@ -45,7 +44,6 @@
 
     <EditText
         android:id="@+id/et_phno"
-        android:background="@drawable/edittext_rounded"
         android:hint="Mobil Number"
         android:inputType="number"
         android:padding="13dp"
@@ -69,7 +67,6 @@
 
     <EditText
         android:id="@+id/et_email"
-        android:background="@drawable/edittext_rounded"
         android:hint="Email Id"
         android:padding="13dp"
         android:layout_marginTop="4dp"
@@ -92,7 +89,6 @@
 
     <EditText
         android:id="@+id/et_uname"
-        android:background="@drawable/edittext_rounded"
         android:hint="User Name"
         android:padding="13dp"
         android:layout_marginTop="4dp"
@@ -114,7 +110,6 @@
 
     <EditText
         android:id="@+id/et_password"
-        android:background="@drawable/edittext_rounded"
         android:hint="Password"
         android:padding="13dp"
         android:layout_marginTop="4dp"
@@ -138,7 +133,6 @@
     <EditText
         android:id="@+id/et_restaurent"
         android:hint="Restaurant Name"
-        android:background="@drawable/edittext_rounded"
         android:padding="13dp"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="13dp"

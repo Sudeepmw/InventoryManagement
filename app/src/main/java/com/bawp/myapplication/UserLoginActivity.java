@@ -14,14 +14,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.inventorymanagementsystem.EndPointUrl;
-import com.inventorymanagementsystem.ResponseData;
-import com.inventorymanagementsystem.RetrofitInstance;
-import com.inventorymanagementsystem.Utils;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class UserLoginActivity extends AppCompatActivity {
@@ -72,22 +64,13 @@ public class UserLoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Enter your Password",Toast.LENGTH_LONG).show();
                     return;
                 }
-                submitData();
+
 
             }
         });
 
-
-        Typeface basicdt=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
-        tv_username.setTypeface(basicdt);
-        tv_password.setTypeface(basicdt);
-        tv_forgetpwd.setTypeface(basicdt);
-        tv_newuser.setTypeface(basicdt);
-        tv_signup.setTypeface(basicdt);
-        et_PWD.setTypeface(basicdt);
-        btn_add.setTypeface(basicdt);
-
-    }
+// Data Base Login authentication
+        // Sudeep Working on database
 
     }
 }
