@@ -32,7 +32,6 @@ public class AdminLoginActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Admin Login");
 
-       sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
 
 
 
@@ -68,4 +67,4 @@ public class AdminLoginActivity extends AppCompatActivity {
 
     }
 
-}
+

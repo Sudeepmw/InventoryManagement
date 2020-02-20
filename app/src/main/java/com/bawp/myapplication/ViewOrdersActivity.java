@@ -12,13 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-
-
-
 public class ViewOrdersActivity extends AppCompatActivity {
     ListView list_view;
     ProgressDialog progressDialog;
-    List<ViewOrdersPojo> a1;
+
     SharedPreferences sharedPreferences;
     String uname;
     @Override
@@ -36,7 +33,7 @@ public class ViewOrdersActivity extends AppCompatActivity {
 
     }
 
-    }
+
     @Override                                                                                                                    //add this method in your program
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

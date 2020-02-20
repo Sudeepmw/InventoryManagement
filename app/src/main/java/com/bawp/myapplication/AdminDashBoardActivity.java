@@ -28,13 +28,6 @@ public class AdminDashBoardActivity extends AppCompatActivity {
         btn_add_items=(Button)findViewById(R.id.btn_add_items);
         btn_update_items=(Button)findViewById(R.id.btn_update_items);
 
-        Typeface fontstyle=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
-        cd_view_orders.setTypeface(fontstyle);
-        cd_pending_orders.setTypeface(fontstyle);
-        cd_develer_orders.setTypeface(fontstyle);
-        btn_add_items.setTypeface(fontstyle);
-        btn_update_items.setTypeface(fontstyle);
-
 
 
 
