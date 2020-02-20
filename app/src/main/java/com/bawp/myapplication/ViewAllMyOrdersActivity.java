@@ -24,7 +24,7 @@ public class ViewAllMyOrdersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       
+
 
 
         uname = sharedPreferences.getString("user_name", "");
