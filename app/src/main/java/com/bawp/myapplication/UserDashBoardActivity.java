@@ -60,7 +60,8 @@ public class UserDashBoardActivity extends AppCompatActivity {
         edit_myprofile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+Intent intent=new Intent(UserDashBoardActivity.this,UserEditProfileActivity.class);
+                 startActivity(intent);
 
             }
         });

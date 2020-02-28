@@ -1,9 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserEditProfileActivity">
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv1"
+            android:text="Name"
+            android:layout_marginTop="14dp"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:hint="Enter Your Name"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:id="@+id/tv2"
+            android:text="Phone No"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_phno"
+            android:hint="Mobil Number"
+            android:inputType="number"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv3"
+            android:text="Email"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:hint="Email Id"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv4"
+            android:text="User Name"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_uname"
+            android:hint="User Name"
+            android:editable="false"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:text="Password"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:hint="Password"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv6"
+            android:text="Pincode"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_pincode"
+            android:hint="Pincode"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:text="Locality"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_locality"
+            android:hint="Locality"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv8"
+            android:text="Shipping Address"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_shippingadd"
+            android:hint="Shipping Address"
+            android:minLines="3"
+            android:padding="8dp"
+            android:gravity="top"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_reg"
+            android:text="Submit"
+            android:layout_gravity="right"
+            android:layout_margin="15dp"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+</ScrollView>
