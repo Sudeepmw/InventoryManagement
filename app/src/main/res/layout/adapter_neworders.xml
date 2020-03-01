@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#FFF"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll"
+        android:padding="2dp"
+        android:background="#FF9891"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#FFF"
+            android:layout_height="match_parent">
+
+            <ImageView android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/tv_item_name"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:textColor="#000 "
+                android:padding="4dp"
+                android:layout_below="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:textColor="#000 "
+                android:padding="4dp"
+                android:layout_below="@+id/tv_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/btn_dec"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:textSize="14sp"
+                    android:text="0"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FF7373"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <ImageView
+                    android:id="@+id/btn_inc"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                     />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -23,14 +23,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bawp.myapplication.Classes.AddItems;
 import com.bawp.myapplication.DatabaseConnection.EndPointURL;
+import com.bawp.myapplication.DatabaseConnection.ResponseData;
 import com.bawp.myapplication.DatabaseConnection.RetrofitInstance;
-import com.inventorymanagementsystem.EndPointUrl;
-import com.inventorymanagementsystem.R;
-import com.inventorymanagementsystem.ResponseData;
-import com.inventorymanagementsystem.RetrofitInstance;
-import com.inventorymanagementsystem.Utils;
-import com.inventorymanagementsystem.adapter.NewOrderAdapter;
-import com.inventorymanagementsystem.model.AddItems;
+import com.bawp.myapplication.DatabaseConnection.Utils;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,12 +96,7 @@ public class NewOrdersActivity extends AppCompatActivity {
 
             }
         });
-       /* btnPrint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                printBill();
-            }
-        });*/
+
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -192,7 +183,7 @@ public class NewOrdersActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading....");
         progressDialog.show();
 
-        EndPointUrl service = RetrofitInstance.getRetrofitInstance().create(EndPointUrl.class);
+        EndPointURL service = RetrofitInstance.getRetrofitInstance().create(EndPointURL.class);
 
         Call<ResponseData> call = service.add_orders(tvBill.getText().toString(),total+"","25/02/2020",session,"0","Bawarchi");
         call.enqueue(new Callback<ResponseData>() {
