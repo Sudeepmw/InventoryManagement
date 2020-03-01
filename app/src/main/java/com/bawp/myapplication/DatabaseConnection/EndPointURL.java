@@ -3,6 +3,7 @@ package com.bawp.myapplication.DatabaseConnection;
 
 import com.bawp.myapplication.Classes.AddItems;
 import com.bawp.myapplication.Classes.DeliveredItems;
+import com.bawp.myapplication.Classes.EditProfile;
 import com.bawp.myapplication.Classes.Items;
 import com.bawp.myapplication.Classes.NotReceivedGoods;
 import com.bawp.myapplication.Classes.ReceivedGoods;
@@ -44,6 +45,11 @@ public interface EndPointURL {
             @Query("pwd") String pwd
     );
 
+    @GET("InventoryManagementSystem/getUserProfile.php")
+    Call<List<EditProfile>> getUserProfile
+            (
+                    @Query("uname") String uname
+            );
 
 
 
