@@ -1,4 +1,4 @@
 package com.bawp.myapplication.DatabaseConnection;
 
-public class GetWebCallURL {
+public class EndPointURL {
 }

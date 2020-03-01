@@ -2,7 +2,7 @@ package com.bawp.myapplication.Classes;
 
 import com.google.gson.annotations.SerializedName;
 
-public class OrdersDelivered {
+public class Delivered {
     @SerializedName("name")
     private String name;
 
@@ -17,7 +17,7 @@ public class OrdersDelivered {
     @SerializedName("quantity")
     private String quantity;
 
-    public OrdersDelivered(String goods_name, String quantity, String name, String phno) {
+    public Delivered(String goods_name, String quantity, String name, String phno) {
         this.setGoods_name(goods_name);
         this.setQuantity(quantity);
         this.setName(name);
