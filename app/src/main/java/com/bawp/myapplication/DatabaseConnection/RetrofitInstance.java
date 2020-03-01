@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class DatabaseBaseConnection {
+public class RetrofitInstance {
 
         private static Retrofit result;
 
@@ -15,7 +15,7 @@ public class DatabaseBaseConnection {
 
 
 
-        public static Retrofit getResult() {
+        public static Retrofit getRetrofitInstance() {
 
 
 

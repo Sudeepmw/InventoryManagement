@@ -8,7 +8,7 @@ public class ViewAllMyOrders {
     private String id;
 
 
-    @SerializedName("items")
+    @SerializedName("Items")
     private String items;
 
 

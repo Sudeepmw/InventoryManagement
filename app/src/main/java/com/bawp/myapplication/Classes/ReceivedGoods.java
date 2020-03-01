@@ -7,7 +7,7 @@ public class ReceivedGoods{
     private String id;
 
 
-    @SerializedName("items")
+    @SerializedName("Items")
     private String items;
 
 

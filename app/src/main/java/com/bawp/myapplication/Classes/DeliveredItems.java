@@ -8,7 +8,7 @@ public class DeliveredItems {
     @SerializedName("id")
     public String id;
 
-    @SerializedName("items")
+    @SerializedName("Items")
     public String items;
 
     @SerializedName("quantity")
