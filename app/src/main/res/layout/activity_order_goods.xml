@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:text="Goods Name"
+        android:textSize="16dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#303F9F"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spin_iteams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_rounded"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="15dp"
+        android:popupBackground="@android:color/white"
+        android:scrollbars="none"
+        android:spinnerMode="dropdown" />
+
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:text="Quantity"
+        android:textSize="16dp"
+        android:textColor="#303F9F"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_quantity"
+        android:background="@drawable/edittext_rounded"
+        android:inputType="number"
+        android:padding="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:text="Price"
+        android:textSize="16dp"
+        android:textColor="#303F9F"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_price"
+        android:background="@drawable/edittext_rounded"
+        android:inputType="number"
+        android:padding="13dp"
+        android:enabled="false"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_dis_date"
+        android:text="Order Date"
+        android:textSize="16dp"
+        android:textColor="#303F9F"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:padding="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edittext_rounded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_restaurent"
+        android:text="Restaurant Name"
+        android:textSize="16dp"
+        android:textColor="#303F9F"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_restaurent"
+        android:hint="Restaurant Name"
+        android:background="@drawable/edittext_rounded"
+        android:padding="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:background="@drawable/button1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvBill"
+                android:visibility="gone"
+                android:singleLine="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <View
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_width="match_parent"
+                android:background="#FF9800"
+                android:layout_height="1dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvTotal"
+                android:text="Total : 0"
+                android:textSize="18sp"
+                android:textColor="#FF9800"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/btnClose"
+                android:text="Close"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/button90"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/btnClear"
+                    android:text="Clear"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingBottom="4dp"
+                    android:background="@drawable/button90"
+                    android:layout_toLeftOf="@+id/btnClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:text="Submit"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingBottom="4dp"
+                    android:background="@drawable/button90"
+                    android:layout_toLeftOf="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                  <!-- <TextView
+                   android:id="@+id/btn_submit"
+                   android:text="Submit"
+                   android:paddingLeft="8dp"
+                   android:paddingRight="8dp"
+                   android:paddingTop="4dp"
+                   android:layout_marginRight="16dp"
+                   android:paddingBottom="4dp"
+                   android:background="@drawable/button90"
+                   android:layout_toRightOf="@+id/btnClear"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />-->
+            </RelativeLayout>
+        </LinearLayout>
+
+<View
+    android:background="#FF9800"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:background="#F3F1F1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<RelativeLayout
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="100dip">
+
+            <HorizontalScrollView
+                android:id="@+id/hsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/innerLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        android:id="@+id/asthma_action_plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent" >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bet" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:text="1234"
+                                android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/controlled_medication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bharath" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/as_needed_medication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/biodon" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                                 />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/rescue_medication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/cid" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/your_symptoms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/flick" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/your_triggers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/pudami" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                               />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/wheeze_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/revive" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                                 />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/peak_flow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent" >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/tricho" />
+                            <TextView
+                                android:layout_width="0.2dp"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentRight="true"
+                                 />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            &lt;!&ndash;<TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.2dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/hsv"
+                 />
+            <LinearLayout
+                android:id="@+id/prev"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:descendantFocusability="blocksDescendants" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/kohli" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:descendantFocusability="blocksDescendants" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/kohli" />
+            </LinearLayout>&ndash;&gt;
+
+
+        </RelativeLayout>
+
+
+-->
+
+
+
