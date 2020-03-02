@@ -134,7 +134,7 @@ public class AddItemsActivity extends AppCompatActivity implements EasyPermissio
         }
 
     }
-
+// Oncreate Menu
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);//Menu Resource, Menu
         return true;
