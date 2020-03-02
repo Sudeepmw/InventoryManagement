@@ -16,28 +16,45 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_item_name"
+            android:id="@+id/tv_order_id"
             android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_order_created_by"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_marginTop="4dp"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/tv_quantity"
+            android:visibility="gone"
             android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/tv_price"
+            android:visibility="gone"
             android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/tv_restaurent_name"
+            android:visibility="gone"
             android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/tv_order_date"
+            android:visibility="gone"
             android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -46,6 +63,7 @@
 
 
         <RelativeLayout
+            android:visibility="gone"
             android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -56,14 +74,16 @@
                 android:textColor="#FFFFFF"
                 android:layout_alignParentRight="true"
                 android:layout_margin="15dp"
+                android:background="@drawable/button2"
                 android:layout_width="150dp"
                 android:layout_height="40dp" />
 
             <Button
                 android:id="@+id/btn_not_deliver"
-                android:text="Out Of Stock"
+                android:text="Cancelled"
                 android:textColor="#FFFFFF"
                 android:layout_margin="15dp"
+                android:background="@drawable/button2"
                 android:layout_width="150dp"
                 android:layout_height="40dp" />
 

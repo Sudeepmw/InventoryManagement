@@ -43,6 +43,31 @@
             android:layout_height="match_parent" />
 
 
+      <!--  <RelativeLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_rejected"
+                android:text="Rejected"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:background="@drawable/button2"
+                android:layout_width="150dp"
+                android:layout_height="40dp" />
+
+            &lt;!&ndash; <Button
+                 android:id="@+id/btn_not_deliver"
+                 android:text="Out Of Stock"
+                 android:layout_margin="15dp"
+                 android:background="@drawable/button2"
+                 android:layout_width="150dp"
+                 android:layout_height="40dp" />&ndash;&gt;
+
+        </RelativeLayout>-->
+
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

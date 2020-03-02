@@ -19,6 +19,7 @@
 
         <EditText
             android:id="@+id/et_name"
+            android:background="@drawable/edittext_rounded"
             android:hint="Enter Your Name"
             android:padding="8dp"
             android:layout_marginTop="4dp"
@@ -40,6 +41,7 @@
 
         <EditText
             android:id="@+id/et_phno"
+            android:background="@drawable/edittext_rounded"
             android:hint="Mobil Number"
             android:inputType="number"
             android:padding="8dp"
@@ -61,6 +63,7 @@
 
         <EditText
             android:id="@+id/et_email"
+            android:background="@drawable/edittext_rounded"
             android:hint="Email Id"
             android:padding="8dp"
             android:layout_marginTop="4dp"
@@ -81,6 +84,7 @@
 
         <EditText
             android:id="@+id/et_uname"
+            android:background="@drawable/edittext_rounded"
             android:hint="User Name"
             android:editable="false"
             android:padding="8dp"
@@ -101,6 +105,7 @@
 
         <EditText
             android:id="@+id/et_password"
+            android:background="@drawable/edittext_rounded"
             android:hint="Password"
             android:padding="8dp"
             android:layout_marginTop="4dp"
@@ -121,6 +126,7 @@
 
         <EditText
             android:id="@+id/et_pincode"
+            android:background="@drawable/edittext_rounded"
             android:hint="Pincode"
             android:padding="8dp"
             android:layout_marginTop="4dp"
@@ -140,6 +146,7 @@
 
         <EditText
             android:id="@+id/et_locality"
+            android:background="@drawable/edittext_rounded"
             android:hint="Locality"
             android:padding="8dp"
             android:layout_marginTop="4dp"
@@ -160,6 +167,7 @@
 
         <EditText
             android:id="@+id/et_shippingadd"
+            android:background="@drawable/edittext_rounded"
             android:hint="Shipping Address"
             android:minLines="3"
             android:padding="8dp"
@@ -180,6 +188,7 @@
             android:text="Submit"
             android:layout_gravity="right"
             android:layout_margin="15dp"
+            android:background="@drawable/button2"
             android:layout_width="150dp"
             android:layout_height="40dp" />
 

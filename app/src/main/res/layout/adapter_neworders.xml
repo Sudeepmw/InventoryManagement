@@ -54,6 +54,7 @@
                     android:id="@+id/btn_dec"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:background="@drawable/ic_minus"
                     />
                 <TextView
                     android:id="@+id/tv_count"
@@ -70,7 +71,7 @@
                     android:id="@+id/btn_inc"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                     />
+                    android:src="@drawable/ic_plus" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

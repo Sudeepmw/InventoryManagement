@@ -9,39 +9,78 @@
     card_view:cardCornerRadius="8dp"
     card_view:cardElevation="2dp"
     card_view:cardUseCompatPadding="true">
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="8dp"
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvtot"
+        android:textColor="#D31313"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvtotbil"
+        android:textColor="#D31313"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_itemname"
+        android:layout_marginTop="4dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/btn_inc"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_plus" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tv_item_name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <TextView
-            android:id="@+id/tv_quantity"
-            android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <TextView
-            android:id="@+id/tv_price"
-            android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:text="Select Quantity      :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/tv_order_date"
-            android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/tv_status"
-            android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <Spinner
+            android:id="@+id/spin_quantity"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_rounded"
+            android:textColorHint="#B68E9C"
+            android:layout_marginLeft="15dp"
+            android:padding="8dp"
+            android:popupBackground="@android:color/white"
+            android:entries="@array/item_quantity"
+            android:scrollbars="none"
+            android:spinnerMode="dropdown" />
 
 
     </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
 </androidx.cardview.widget.CardView>

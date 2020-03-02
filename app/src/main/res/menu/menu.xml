@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:androclass="http://schemas.android.com/apk/res/android" >
-    <item androclass:title="logout" androclass:id="@+id/idlogout">Logout</item>
+<menu xmlns:androclass="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+   <item
+       androclass:title="Logout"
+       androclass:id="@+id/idlogout"
+      androclass:icon="@mipmap/logout"
+      app:showAsAction="always"
+      />
 </menu>
+

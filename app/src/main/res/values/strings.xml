@@ -1,8 +1,29 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
-    <string name="new_user">New User ?</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="title_activity_vieworders">vieworders</string>
+    <string name="app_name">Inventory Management System</string>
+    <string-array name="item_quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+
+    </string-array>
+
+    <string name="upload_image">UPLOAD IMAGE</string>
+    <string name="read_file">This app needs access to your file storage so that it can read photos.</string>
 </resources>

@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bawp.myapplication">
+    package="com.inventorymanagementsystem">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/iconn"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/iconn"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartNewOrderActivity"></activity>
-        <activity android:name=".UserEditProfileActivity" />
-        <activity android:name=".NewOrdersActivity" />
-        <activity android:name=".ReceivedGoodsActivity" />
-        <activity android:name=".AddGoodsActivity" />
-        <activity android:name=".AdminOrderSettingsDashBoardActivity" />
-        <activity android:name=".AdminDashBoardActivity" />
-        <activity android:name=".EditItemActivity" />
-        <activity android:name=".PaymentActivity" />
-        <activity android:name=".SplashMain" />
-        <activity android:name=".UserDashBoardActivity" />
-        <activity android:name=".UserLoginActivity" />
-        <activity android:name=".UserOrderSettingsDashBoardActivity" />
-        <activity android:name=".UserRegistrationActivity" />
-        <activity android:name=".ViewAllMyOrdersActivity" />
-        <activity android:name=".ViewOrdersActivity" />
-        <activity android:name=".AdminLoginActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SplashScreenMain">
+        <activity android:name=".JavaClasses.MainActivity"></activity>
+        <activity android:name=".JavaClasses.MainScreenSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".JavaClasses.DeliveredItemsActivity" />
+        <activity android:name=".JavaClasses.ViewOrdersActivity" />
+        <activity android:name=".JavaClasses.AdminDashBoardActivity" />
+        <activity android:name=".JavaClasses.NotReceivedGoodsActivity" />
+        <activity android:name=".JavaClasses.ReceivedGoodsActivity" />
+        <activity android:name=".JavaClasses.UserLoginActivity" />
+        <activity android:name=".JavaClasses.OrderGoodsActivity" />
+        <activity android:name=".JavaClasses.UserRegistrationActivity" />
+        <activity android:name=".JavaClasses.AdminLoginActivity" />
+        <activity android:name=".JavaClasses.UserDashBoardActivity" />
+        <activity android:name=".JavaClasses.UserEditProfileActivity" />
+        <activity android:name=".JavaClasses.UpdateItemsActivity" />
+        <activity android:name=".JavaClasses.AddItemsActivity" />
+        <activity android:name=".JavaClasses.ViewAllMyOrdersActivity" />
+        <activity android:name=".JavaClasses.EditItemActivity" />
+        <activity android:name=".JavaClasses.OutOfStockItemsActivity" />
+        <activity android:name=".JavaClasses.PaymentActivity" />
+        <activity android:name=".JavaClasses.ForgetPasswordActivity" />
+        <activity android:name=".JavaClasses.OrderConfirmationSplash" />
+        <activity android:name=".JavaClasses.StartNewOrderActivity"></activity>
+        <activity android:name=".JavaClasses.NewOrdersActivity"></activity>
+        <activity android:name=".JavaClasses.ReorderActivity"></activity>
+        <activity android:name=".JavaClasses.ViewOrdersStatusAdmin"></activity>
     </application>
 
 </manifest>

@@ -9,34 +9,60 @@
     card_view:cardCornerRadius="8dp"
     card_view:cardElevation="2dp"
     card_view:cardUseCompatPadding="true">
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="8dp"
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tv_phno"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <TextView
-            android:id="@+id/tv_phno"
-            android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/tv_goods_name"
-            android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/tv_quantity"
-            android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
-    </LinearLayout>
+  <!--  <RelativeLayout
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_deliver"
+            android:text="Delivered"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/buttonq"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/btn_not_deliver"
+            android:text="Not Delivered"
+            android:layout_margin="15dp"
+            android:background="@drawable/buttonq"
+            android:layout_width="150dp"
+            android:layout_height="40dp" />
+
+
+    </RelativeLayout>-->
+
+
+</LinearLayout>
 </androidx.cardview.widget.CardView>

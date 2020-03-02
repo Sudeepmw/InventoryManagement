@@ -1,81 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="8dp">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tvItem"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="" />
-
     <TextView
         android:id="@+id/tvQuantity"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="" />
 
     <TextView
-        android:id="@+id/tvPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="" />
+    android:id="@+id/tvPrice"
+    android:layout_marginTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="" />
 
     <TextView
+        android:text="Date"
+        android:id="@+id/textv_dob"
+        android:textColor="#A76464"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tv_dob"
+        android:hint="Select Date"
+        android:padding="6dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edittext_rounded"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_rest_name"
+        android:text=" Restaurant Name "
+        android:layout_marginTop="10dp"
+        android:textColor="#A76464"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_restaurent"
+        android:background="@drawable/edittext_rounded"
+        android:hint="Restaurant Name "
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textColorHint="#C5BFC2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<TextView
         android:id="@+id/tv_restaurent_name"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="" />
 
     <TextView
         android:id="@+id/tvDate"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />-->
+
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="" />
+        android:id="@+id/radioGroup">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
+    <RadioButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
-
+        android:text="Debit card"
+        android:id="@+id/rbNetBank"
+        android:checked="true"
+        android:textSize="18dp" />
         <RadioButton
-            android:id="@+id/rbNetBank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Debit card"
-            android:textSize="18dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Card"
+        android:id="@+id/rbPhonePay"
 
+        android:textSize="18dp" />
         <RadioButton
-            android:id="@+id/rbPhonePay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Credit Card"
-
-            android:textSize="18dp" />
-
-        <RadioButton
-            android:id="@+id/rbPaytm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Net Banking"
+            android:id="@+id/rbPaytm"
 
             android:textSize="18dp" />
     </RadioGroup>
-
     <Button
         android:id="@+id/btn_submit"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:text="Submit"
         android:layout_gravity="center"
         android:layout_margin="50dp"
-        android:text="Submit" />
+        android:background="@drawable/button1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
 </LinearLayout>
