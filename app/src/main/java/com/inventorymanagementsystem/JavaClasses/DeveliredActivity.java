@@ -54,7 +54,6 @@ public class DeveliredActivity extends AppCompatActivity {
         list_view.setAdapter(new DeliveredAdapter(a1, DeveliredActivity.this));
 
 
-        //serverData();
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
