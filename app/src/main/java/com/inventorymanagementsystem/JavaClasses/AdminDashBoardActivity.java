@@ -40,7 +40,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {
         cd_view_orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this,ViewOrdersActivity.class);
+                Intent intent=new Intent(AdminDashBoardActivity.this, ViewOrdersAdminActivity.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +49,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {
         cd_delivered_orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this, DeliveredItemsActivity.class);
+                Intent intent=new Intent(AdminDashBoardActivity.this, DeliveredItemsAdminActivity.class);
                 startActivity(intent);
 
             }
@@ -59,7 +59,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {
         cd_cancelled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this, OutOfStockItemsActivity.class);
+                Intent intent=new Intent(AdminDashBoardActivity.this, OutOfStockItemsAdminActivity.class);
                 startActivity(intent);
 
             }

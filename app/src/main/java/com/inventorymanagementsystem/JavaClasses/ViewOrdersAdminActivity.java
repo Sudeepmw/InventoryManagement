@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.inventorymanagementsystem.R;
 
 
-public class ViewOrdersActivity extends AppCompatActivity {
+public class ViewOrdersAdminActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

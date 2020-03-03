@@ -15,10 +15,10 @@ import android.widget.Toast;
 import androidx.cardview.widget.CardView;
 
 import com.inventorymanagementsystem.InventoryEndURL;
+import com.inventorymanagementsystem.JavaClasses.ViewOrdersAdminActivity;
 import com.inventorymanagementsystem.R;
 import com.inventorymanagementsystem.ResponseData;
 import com.inventorymanagementsystem.RetrofitInstance;
-import com.inventorymanagementsystem.JavaClasses.ViewOrdersActivity;
 import com.inventorymanagementsystem.JavaClasses.ViewOrdersStatusAdmin;
 import com.inventorymanagementsystem.JavaClasses.ViewOrders;
 
@@ -110,7 +110,7 @@ public class ViewOrdersAdapter extends BaseAdapter {
             public void onClick(View view) {
                 submitData(ar.get(pos).getId(),"Delivered");
                 Toast.makeText(cnt,"Delivered status is updated successfully.",Toast.LENGTH_LONG).show();
-                ((ViewOrdersActivity)cnt).finish();
+                ((ViewOrdersAdminActivity)cnt).finish();
             }
         });
 
@@ -120,7 +120,7 @@ public class ViewOrdersAdapter extends BaseAdapter {
             public void onClick(View view) {
                 submitData(ar.get(pos).getId(),"Out of Stock");
                 Toast.makeText(cnt,"Out Of Stock status is updated successfully.",Toast.LENGTH_LONG).show();
-                ((ViewOrdersActivity)cnt).finish();
+                ((ViewOrdersAdminActivity)cnt).finish();
             }
         });
 

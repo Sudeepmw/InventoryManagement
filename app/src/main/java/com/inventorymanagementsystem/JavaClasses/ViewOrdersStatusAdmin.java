@@ -71,7 +71,7 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
             public void onClick(View view) {
                 submitData(getIntent().getStringExtra("OrderID"),"Delivered");
                 Toast.makeText(ViewOrdersStatusAdmin.this,"Delivered status is updated successfully.",Toast.LENGTH_LONG).show();
-                //((ViewOrdersActivity)cnt).finish();
+                //((ViewOrdersAdminActivity)cnt).finish();
                 ViewOrdersStatusAdmin.this.finish();
             }
         });
@@ -82,7 +82,7 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
             public void onClick(View view) {
                 submitData(getIntent().getStringExtra("OrderID"),"Out of Stock");
                 Toast.makeText(ViewOrdersStatusAdmin.this,"Out Of Stock status is updated successfully.",Toast.LENGTH_LONG).show();
-                //((ViewOrdersActivity)cnt).finish();
+                //((ViewOrdersAdminActivity)cnt).finish();
                 ViewOrdersStatusAdmin.this.finish();
             }
         });

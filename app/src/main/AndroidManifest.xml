@@ -21,8 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JavaClasses.DeliveredItemsActivity" />
-        <activity android:name=".JavaClasses.ViewOrdersActivity" />
+        <activity android:name=".JavaClasses.DeliveredItemsAdminActivity" />
+        <activity android:name=".JavaClasses.ViewOrdersAdminActivity" />
         <activity android:name=".JavaClasses.AdminDashBoardActivity" />
         <activity android:name=".JavaClasses.NotReceivedGoodsActivity" />
         <activity android:name=".JavaClasses.ReceivedGoodsActivity" />
@@ -36,7 +36,7 @@
         <activity android:name=".JavaClasses.AddItemsActivity" />
         <activity android:name=".JavaClasses.ViewAllMyOrdersActivity" />
         <activity android:name=".JavaClasses.EditItemActivity" />
-        <activity android:name=".JavaClasses.OutOfStockItemsActivity" />
+        <activity android:name=".JavaClasses.OutOfStockItemsAdminActivity" />
         <activity android:name=".JavaClasses.PaymentActivity" />
         <activity android:name=".JavaClasses.ForgetPasswordActivity" />
         <activity android:name=".JavaClasses.OrderConfirmationSplash" />

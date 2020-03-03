@@ -26,7 +26,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class OutOfStockItemsActivity extends AppCompatActivity {
+public class OutOfStockItemsAdminActivity extends AppCompatActivity {
     ListView list_view;
     ProgressDialog progressDialog;
     List<DeliveredItems> a1;
@@ -40,7 +40,7 @@ public class OutOfStockItemsActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
         uname = sharedPreferences.getString("user_name", "");
 
-        getSupportActionBar().setTitle("Delivered Orders");
+        getSupportActionBar().setTitle("Cancelled Orders");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -50,7 +50,7 @@ public class OutOfStockItemsActivity extends AppCompatActivity {
         serverData();
     }
     public void serverData(){
-        progressDialog = new ProgressDialog(OutOfStockItemsActivity.this);
+        progressDialog = new ProgressDialog(OutOfStockItemsAdminActivity.this);
         progressDialog.setMessage("Loading....");
         progressDialog.show();
 
@@ -61,17 +61,17 @@ public class OutOfStockItemsActivity extends AppCompatActivity {
             public void onResponse(Call<List<DeliveredItems>> call, Response<List<DeliveredItems>> response) {
                 progressDialog.dismiss();
                 if(response.body()==null){
-                    Toast.makeText(OutOfStockItemsActivity.this,"No data found",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OutOfStockItemsAdminActivity.this,"No data found",Toast.LENGTH_SHORT).show();
                 }else {
                     a1 = response.body();
-                    list_view.setAdapter(new DeliveredItemsAdapter(a1, OutOfStockItemsActivity.this));
+                    list_view.setAdapter(new DeliveredItemsAdapter(a1, OutOfStockItemsAdminActivity.this));
                 }
             }
 
             @Override
             public void onFailure(Call<List<DeliveredItems>> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(OutOfStockItemsActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OutOfStockItemsAdminActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
         });
     }

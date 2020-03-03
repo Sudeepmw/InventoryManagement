@@ -26,7 +26,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DeliveredItemsActivity extends AppCompatActivity {
+public class DeliveredItemsAdminActivity extends AppCompatActivity {
     ListView list_view;
     ProgressDialog progressDialog;
     List<DeliveredItems> a1;
@@ -50,7 +50,7 @@ public class DeliveredItemsActivity extends AppCompatActivity {
         serverData();
     }
     public void serverData(){
-        progressDialog = new ProgressDialog(DeliveredItemsActivity.this);
+        progressDialog = new ProgressDialog(DeliveredItemsAdminActivity.this);
         progressDialog.setMessage("Loading....");
         progressDialog.show();
 
@@ -61,17 +61,17 @@ public class DeliveredItemsActivity extends AppCompatActivity {
             public void onResponse(Call<List<DeliveredItems>> call, Response<List<DeliveredItems>> response) {
                 progressDialog.dismiss();
                 if(response.body()==null){
-                    Toast.makeText(DeliveredItemsActivity.this,"No data found",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DeliveredItemsAdminActivity.this,"No data found",Toast.LENGTH_SHORT).show();
                 }else {
                     a1 = response.body();
-                    list_view.setAdapter(new DeliveredItemsAdapter(a1, DeliveredItemsActivity.this));
+                    list_view.setAdapter(new DeliveredItemsAdapter(a1, DeliveredItemsAdminActivity.this));
                 }
             }
 
             @Override
             public void onFailure(Call<List<DeliveredItems>> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(DeliveredItemsActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DeliveredItemsAdminActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
         });
     }
