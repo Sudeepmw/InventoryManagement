@@ -1,5 +1,8 @@
 package com.inventorymanagementsystem.JavaClasses;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,6 +21,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {
     CardView cd_delivered_orders,cd_cancelled,cd_additem,cd_updateitem;
     CardView cd_view_orders;
     Button btn_logout;
+    ProgressDialog progressDialog;
 
 
     @Override
@@ -105,12 +109,37 @@ public class AdminDashBoardActivity extends AppCompatActivity {
                 return true;
 
             case R.id.idlogout:
-                // Toast.makeText(getApplicationContext(),"logout Selected",Toast.LENGTH_LONG).show();
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-                finish();
 
-                return true;
+                final AlertDialog.Builder builder = new AlertDialog.Builder(AdminDashBoardActivity.this);
+                builder.setMessage("Are you sure you want to logout?");
+                builder.setCancelable(true);
+                builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        progressDialog = new ProgressDialog(AdminDashBoardActivity.this);
+                        progressDialog.setMessage("logging out....");
+                        progressDialog.show();
+
+                        Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(i);
+                        finish();
+
+                    }
+                });
+
+                builder.setPositiveButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }

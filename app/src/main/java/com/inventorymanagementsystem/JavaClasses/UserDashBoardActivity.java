@@ -123,9 +123,9 @@ public class UserDashBoardActivity extends AppCompatActivity {
                         dialog.cancel();
 
                     }
-                       });
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
 
 
 
