@@ -112,7 +112,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), AdminDashBoardActivity.class));
                     finish();
                 }else{
-                    Toast.makeText(AdminLoginActivity.this,response.body().message,Toast.LENGTH_LONG).show();
+                    Toast.makeText(AdminLoginActivity.this,"Incorrect Username/Password",Toast.LENGTH_LONG).show();
                 }
 
             }

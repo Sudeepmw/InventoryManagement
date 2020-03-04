@@ -127,7 +127,7 @@ public class UserLoginActivity extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 }else{
-                    Toast.makeText(UserLoginActivity.this,response.body().message,Toast.LENGTH_LONG).show();
+                    Toast.makeText(UserLoginActivity.this,"Incorrect Username/Password",Toast.LENGTH_LONG).show();
                 }
 
             }
