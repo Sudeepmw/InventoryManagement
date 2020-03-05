@@ -13,14 +13,14 @@ public class MainScreenSplash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash1);
-        final int ScreenDisplay = 1500;
+        final int ScreenDisplay = 2000;
         Thread t1=new Thread(){
             int wait1=0;
             public void run(){
                 try{
                     while(wait1<=ScreenDisplay )
                     {
-                        sleep(100);
+                        sleep(200);
                         wait1+=100;
                     }
                 }
