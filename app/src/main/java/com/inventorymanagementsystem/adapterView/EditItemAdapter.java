@@ -26,7 +26,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 public class EditItemAdapter extends BaseAdapter {
     List<Items> ar;
     Context cnt;
@@ -91,7 +90,7 @@ public class EditItemAdapter extends BaseAdapter {
         });
 
 
-       Button btn_Delete=(Button)obj2.findViewById(R.id.btn_Delete);
+        Button btn_Delete=(Button)obj2.findViewById(R.id.btn_Delete);
         btn_Delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,13 +106,14 @@ public class EditItemAdapter extends BaseAdapter {
     public  void submitdata(String id)
     {
 
-        InventoryEndURL apiService = RetrofitInstance.getRetrofitInstance().create(InventoryEndURL.class);
+       InventoryEndURL apiService = RetrofitInstance.getRetrofitInstance().create(InventoryEndURL.class);
         Call<ResponseData> call = apiService.delete_items(id);
         call.enqueue(new Callback<ResponseData>() {
             @Override
             public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
                 if (response.body().message.equals("true")) {
                     Toast.makeText(cnt, response.body().message, Toast.LENGTH_LONG).show();
+
                     Log.i("msg", "" + response.body().message);
                     ((UpdateItemsActivity)cnt).finish();
 

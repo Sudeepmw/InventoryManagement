@@ -55,9 +55,15 @@ public class PaymentActivity extends AppCompatActivity {
         });
 
         tvItem=(TextView)findViewById(R.id.tvItem);
-        tvItem.setText("Items : "+getIntent().getStringExtra("item_name"));
+        tvItem.setText("Item : "+getIntent().getStringExtra("item_name"));
         tvPrice=(TextView)findViewById(R.id.tvPrice);
         tvPrice.setText("Total Price : "+"$"+getIntent().getStringExtra("price"));
+      /*  tvDate=(TextView)findViewById(R.id.tvDate);
+        tvDate.setText("Date : "+getIntent().getStringExtra("date"));*/
+       /* tv_restaurent_name=(TextView)findViewById(R.id.tv_restaurent_name);
+        tv_restaurent_name.setText("Restaurent Name : "+getIntent().getStringExtra("restaurant_name"));
+        tvQuantity=(TextView)findViewById(R.id.tvQuantity);
+        tvQuantity.setText("Quantity : "+getIntent().getStringExtra("quantity"));*/
 
 
         btn_submit=(Button)findViewById(R.id.btn_submit);
@@ -65,31 +71,15 @@ public class PaymentActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                final AlertDialog.Builder builder = new AlertDialog.Builder(PaymentActivity.this);
-                builder.setMessage("Your Cart :"+" "+getIntent().getStringExtra("item_name")+"Total: $"+getIntent().getStringExtra("price"));
-
-                builder.setCancelable(true);
-                builder.setNegativeButton("Place order!", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        submitData();
-                        Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(i);
-                        finish();
-                    }
-                });
-                builder.setPositiveButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-
-                    }
-                });
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-
-
-
-
+                if (tv_dob.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Select Order Date", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (et_restaurent.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Please Enter Restaurent Name",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                submitData();
             }
         });
     }
@@ -131,12 +121,26 @@ public class PaymentActivity extends AppCompatActivity {
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
-        Log.d(String.valueOf(PaymentActivity.this), "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
-        month = month +1;
-        date = day + "/" + month + "/" + year;
-        tv_dob.setText(date);
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(String.valueOf(PaymentActivity.this), "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
+
+                date = month + "/" + day + "/" + year;
+                tv_dob.setText(date);
 
 
+
+
+            }
+        };
+        DatePickerDialog dialog = new DatePickerDialog(
+                PaymentActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, mDateSetListener, year, month, day);
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+        dialog.show();
 
     }
     @Override

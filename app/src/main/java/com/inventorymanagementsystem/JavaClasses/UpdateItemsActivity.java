@@ -18,6 +18,14 @@ import com.inventorymanagementsystem.R;
 import com.inventorymanagementsystem.RetrofitInstance;
 import com.inventorymanagementsystem.Utils;
 import com.inventorymanagementsystem.adapterView.EditItemAdapter;
+import com.inventorymanagementsystem.adapterView.UpdateItemsAdapter;
+import com.inventorymanagementsystem.adapterView.ViewAllMyOrdersAdapter;
+import com.inventorymanagementsystem.adapterView.ViewOrdersAdapter;
+import com.inventorymanagementsystem.adapterView.EditItemAdapter;
+import com.inventorymanagementsystem.JavaClasses.Items;
+import com.inventorymanagementsystem.JavaClasses.UpdateItems;
+import com.inventorymanagementsystem.JavaClasses.ViewAllMyOrders;
+import com.inventorymanagementsystem.JavaClasses.ViewOrders;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,3 +112,5 @@ public class UpdateItemsActivity extends AppCompatActivity {
     }
 
 }
+
+

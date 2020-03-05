@@ -6,34 +6,35 @@ public class UpdateItems {
 
 
 
-    @SerializedName("goods_name")
-    private String goods_name;
 
-    @SerializedName("quantity")
-    private String quantity;
+        @SerializedName("goods_name")
+        private String goods_name;
 
-    public UpdateItems(String goods_name, String quantity) {
-       this.setGoods_name(goods_name);
-        this.setQuantity(quantity);
+        @SerializedName("quantity")
+        private String quantity;
+
+        public UpdateItems(String goods_name, String quantity) {
+            this.setGoods_name(goods_name);
+            this.setQuantity(quantity);
 
 
+
+        }
+
+        public String getQuantity() {
+            return quantity;
+        }
+
+        public void setQuantity(String quantity) {
+            this.quantity = quantity;
+        }
+
+        public String getGoods_name() {
+            return goods_name;
+        }
+
+        public void setGoods_name(String goods_name) {
+            this.goods_name = goods_name;
+        }
 
     }
-
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getGoods_name() {
-        return goods_name;
-    }
-
-    public void setGoods_name(String goods_name) {
-        this.goods_name = goods_name;
-    }
-
-}

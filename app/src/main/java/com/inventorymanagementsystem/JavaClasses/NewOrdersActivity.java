@@ -33,7 +33,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 public class NewOrdersActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     NewOrderAdapter newOrderAdapter;
@@ -46,7 +45,6 @@ public class NewOrdersActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     String session;
     //Button btn_submit;
-    String st;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -73,7 +71,14 @@ public class NewOrdersActivity extends AppCompatActivity {
                 intent.putExtra("date",tvBill.getText().toString());
                 intent.putExtra("rest_name",tvBill.getText().toString());
                 intent.putExtra("session",session);
+                str = str.replaceAll("(\r\n|\n)", "|");
+                str = str.replaceAll("  x ","@");
+                String update_str=str.substring(0,str.length()-1);
+                intent.putExtra("update_str",update_str);
                 startActivity(intent);
+
+                //Toast.makeText(getApplicationContext(),,Toast.LENGTH_SHORT).show();
+
             }
         });
         tvBill=(TextView)findViewById(R.id.tvBill);
@@ -82,6 +87,7 @@ public class NewOrdersActivity extends AppCompatActivity {
         tvTotal.setText("Total : $"+"0");
 
         btnClose=(TextView)findViewById(R.id.btnClose);
+        // btnPrint=(TextView)findViewById(R.id.btnPrint);
         btnClear=(TextView)findViewById(R.id.btnClear);
 
         btnClose.setOnClickListener(new View.OnClickListener() {
@@ -117,9 +123,9 @@ public class NewOrdersActivity extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
 
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(NewOrdersActivity.this, 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(NewOrdersActivity.this, 3);
         recyclerView.setLayoutManager(gridLayoutManager);
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(4), true));
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(4), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
@@ -132,7 +138,7 @@ public class NewOrdersActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading....");
         progressDialog.show();
 
-        InventoryEndURL service = RetrofitInstance.getRetrofitInstance().create(InventoryEndURL.class);
+       InventoryEndURL service = RetrofitInstance.getRetrofitInstance().create(InventoryEndURL.class);
         Call<List<AddItems>> call = service.getiteams();
         call.enqueue(new Callback<List<AddItems>>() {
             @Override
@@ -157,15 +163,15 @@ public class NewOrdersActivity extends AppCompatActivity {
         });
     }
 
-    String str="",str1="";
+    String str="";
     int i;
+    String update_str="";
     public void addToCart(){
         total=0;
         str="";
         for(i=0;i<cnt.length;i++){
             if(cnt[i]>0) {
                 str = str +cnt[i]+ "  x "+ a1.get(i).getItem_name()+"\n";
-                str1=str1+cnt[i]+" x "+ a1.get(i).getItem_name()+",";
                 total = total + (cnt[i]*Integer.parseInt(a1.get(i).getPrice()));
             }
         }
@@ -196,9 +202,7 @@ public class NewOrdersActivity extends AppCompatActivity {
                 if (response.body().status.equals("true")) {
                     progressDialog.dismiss();
                     Toast.makeText(NewOrdersActivity.this, response.body().message, Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(NewOrdersActivity.this, OrderConfirmationSplash.class);
-                    st = getIntent().getExtras().getString("Welcome");
-
+                    Intent intent=new Intent(NewOrdersActivity.this,OrderConfirmationSplash.class);
                     startActivity(intent);
                     //finish();
 

@@ -77,7 +77,8 @@ public class EditItemActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<ResponseData> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(EditItemActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditItemActivity.this, "Item is updated successfully.", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
