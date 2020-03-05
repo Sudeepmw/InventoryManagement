@@ -75,7 +75,9 @@ public interface InventoryEndURL {
             @Query("pincode") String pincode,
             @Query("locality") String locality,
             @Query("shipping_address") String shipping_address,
-            @Query("uname1") String uname1
+            @Query("uname1") String uname1,
+            @Query("res") String res
+
     );
 
     @GET("InventoryManagementSystem/add_orders.php")

@@ -14,7 +14,9 @@ public class EditProfile {
     private
     String emailid ;
 
-
+    @SerializedName("restaurant_name")
+    private
+    String restaurant_name ;
 
     @SerializedName("pwd")
     private
@@ -57,6 +59,16 @@ public class EditProfile {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+
+    public String getRes() {
+        return restaurant_name;
+    }
+
+    public void setRes(String restaurant_name) {
+        this.restaurant_name = restaurant_name;
+    }
+
 
     public String getEmailid() {
         return emailid;

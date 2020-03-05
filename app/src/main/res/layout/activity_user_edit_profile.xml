@@ -136,6 +136,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/tv55"
+            android:text="Restaurant"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_getres"
+            android:background="@drawable/edittext_rounded"
+            android:hint="Restaurant Name"
+            android:singleLine="true"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
         <TextView
             android:id="@+id/tv6"
