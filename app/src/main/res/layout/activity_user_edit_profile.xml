@@ -96,7 +96,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/tv5"
+            android:id="@+id/tv9"
             android:text="Password"
             android:textColor="#A76464"
             android:layout_marginLeft="15dp"
@@ -104,9 +104,30 @@
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/et_password"
+            android:id="@+id/et_cpassword"
             android:background="@drawable/edittext_rounded"
             android:hint="Password"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:textColorHint="#C5BFC2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv5"
+            android:text="Confirm Password"
+            android:textColor="#A76464"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:singleLine="true"
+            android:background="@drawable/edittext_rounded"
+            android:hint="Password"
+            android:inputType="textPassword"
             android:padding="8dp"
             android:layout_marginTop="4dp"
             android:layout_marginLeft="13dp"
