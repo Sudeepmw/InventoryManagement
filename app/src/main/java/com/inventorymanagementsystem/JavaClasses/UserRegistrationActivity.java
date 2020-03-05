@@ -28,8 +28,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UserRegistrationActivity extends AppCompatActivity {
-    EditText et_name, et_phno, et_uname, et_password,et_email,et_restaurent;
-    TextView tv1,tv2,tv4,tv5,tv3,tv_restaurent;
+    EditText et_name, et_phno, et_uname, et_password,et_email,et_restaurent,et_pincode,et_locality,et_shippingadd,et_conpassword;;
+    TextView tv1,tv2,tv4,tv5,tv3,tv_restaurent,tv9;
     Button btn_reg;
     ProgressDialog progressDialog;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -49,15 +49,20 @@ public class UserRegistrationActivity extends AppCompatActivity {
         tv5=(TextView)findViewById(R.id.tv5);
         tv3=(TextView)findViewById(R.id.tv3);
         tv_restaurent=(TextView)findViewById(R.id.tv3);
-
+        tv9=(TextView)findViewById(R.id.tv9);
 
         btn_reg = (Button) findViewById(R.id.btn_reg);
         et_name = (EditText) findViewById(R.id.et_name);
         et_phno = (EditText) findViewById(R.id.et_phno);
         et_uname = (EditText) findViewById(R.id.et_uname);
         et_password = (EditText) findViewById(R.id.et_password);
+        et_conpassword = (EditText) findViewById(R.id.et_conpassword);
         et_email = (EditText) findViewById(R.id.et_email);
         et_restaurent= (EditText) findViewById(R.id.et_restaurent);
+
+        et_pincode = (EditText) findViewById(R.id.et_pincode);
+        et_locality = (EditText) findViewById(R.id.et_locality);
+        et_shippingadd = (EditText) findViewById(R.id.et_shippingadd);
 
         Typeface fontstyle=Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato-Medium.ttf");
         tv1.setTypeface(fontstyle);
@@ -69,11 +74,14 @@ public class UserRegistrationActivity extends AppCompatActivity {
         et_phno.setTypeface(fontstyle);
         et_uname.setTypeface(fontstyle);
         et_password.setTypeface(fontstyle);
+
         et_email.setTypeface(fontstyle);
         tv3.setTypeface(fontstyle);
         et_restaurent.setTypeface(fontstyle);
         tv_restaurent.setTypeface(fontstyle);
-
+        et_pincode.setTypeface(fontstyle);
+        et_locality.setTypeface(fontstyle);
+        et_shippingadd.setTypeface(fontstyle);
 
 
         btn_reg.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +113,14 @@ public class UserRegistrationActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Password Should have 8 charaters", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (et_conpassword.getText().toString().isEmpty()|| et_conpassword.length()<8) {
+                    Toast.makeText(getApplicationContext(), "Password Should have 8 characters", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!et_password.getText().toString().equals( et_conpassword.getText().toString()) ) {
+                    Toast.makeText(getApplicationContext(), "Passwords does not match", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 else if (et_email.getText().toString().trim().matches(emailPattern)) {
                     // Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
                     submitData();
@@ -115,7 +131,18 @@ public class UserRegistrationActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
                 }
 
-
+                if (et_pincode.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Pincode Should not be Empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (et_locality.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Locality Should not be Empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (et_shippingadd.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Shipping Address Should not be Empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // finish();
 
             }
@@ -139,7 +166,10 @@ public class UserRegistrationActivity extends AppCompatActivity {
         String email = et_email.getText().toString();
         String uname = et_uname.getText().toString();
         String pwd = et_password.getText().toString();
-        String rest_name = et_restaurent.getText().toString();
+        String res = et_restaurent.getText().toString();
+        String pincode = et_pincode.getText().toString();
+        String locality = et_locality.getText().toString();
+        String shipingadd = et_shippingadd.getText().toString();
 
         // String studtech = spinner_studteach.getSelectedItem().toString();
 
@@ -148,7 +178,7 @@ public class UserRegistrationActivity extends AppCompatActivity {
 //        progressDialog.show();
 
         InventoryEndURL service = RetrofitInstance.getRetrofitInstance().create(InventoryEndURL.class);
-        Call<ResponseData> call = service.user_registration(name, phno, email, uname, pwd,rest_name);
+        Call<ResponseData> call = service.user_registration(name, phno, email, uname, pwd,pincode,locality,shipingadd,res);
         call.enqueue(new Callback<ResponseData>() {
             @Override
             public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {

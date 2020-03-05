@@ -28,8 +28,14 @@ public interface InventoryEndURL {
             @Query("phone") String phone,
             @Query("emailid") String emailid,
             @Query("uname1") String uname1,
+
             @Query("pwd1") String pwd,
-            @Query("restaurant_name") String restaurant_name
+            @Query("pincode") String pincode,
+            @Query("locality") String locality,
+            @Query("shipping_address") String shipping_address,
+            @Query("res") String res
+
+
 
     );
     @GET("InventoryManagementSystem/user_login.php")
@@ -51,14 +57,7 @@ public interface InventoryEndURL {
             );
 
 
-    /*@GET("/InventoryManagementSystem/update_user_profile.php")
-    Call<ResponseData> update_user_profile(
-            @Query("name") String name,
-            @Query("phone") String phone,
-            @Query("emailid") String emailid,
-            @Query("pwd1") String pwd1,
-            @Query("uname1") String uname1
-    );*/
+
 
     @GET("InventoryManagementSystem/getItems.php")
     Call<List<AddItems>> getiteams();
