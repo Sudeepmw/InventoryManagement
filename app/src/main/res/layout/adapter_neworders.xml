@@ -26,9 +26,10 @@
 
             <TextView
                 android:id="@+id/tv_item_name"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:gravity="center_horizontal"
                 android:textColor="#000 "
+                android:textStyle="bold"
                 android:padding="4dp"
                 android:layout_below="@+id/image_view"
                 android:layout_width="match_parent"
@@ -36,9 +37,10 @@
 
             <TextView
                 android:id="@+id/tv_price"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:gravity="center_horizontal"
                 android:textColor="#000 "
+                android:textStyle="bold"
                 android:padding="4dp"
                 android:layout_below="@+id/tv_item_name"
                 android:layout_width="match_parent"
@@ -68,12 +70,13 @@
                     />
                 <TextView
                     android:id="@+id/tv_count"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:text="0"
+                    android:textStyle="bold"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_gravity="center_vertical"
-                    android:textColor="#FF7373"
+                    android:textColor="#000 "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />

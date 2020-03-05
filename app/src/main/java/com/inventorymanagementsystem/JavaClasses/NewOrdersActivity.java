@@ -117,9 +117,9 @@ public class NewOrdersActivity extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
 
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(NewOrdersActivity.this, 3);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(NewOrdersActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(4), true));
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(4), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
