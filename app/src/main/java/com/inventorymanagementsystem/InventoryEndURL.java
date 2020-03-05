@@ -78,6 +78,16 @@ public interface InventoryEndURL {
             @Query("res") String res
 
     );
+    @GET("InventoryManagementSystem/add_orders1.php")
+    Call<ResponseData> add_orders1(
+            @Query("items") String items,
+            @Query("price") String price,
+            @Query("order_date") String order_date,
+            @Query("order_created_by") String order_created_by,
+            @Query("quantity") String quantity,
+            @Query("restaurant_name") String restaurant_name,
+            @Query("updated_str") String updated_str
+    );
 
     @GET("InventoryManagementSystem/add_orders.php")
     Call<ResponseData> add_orders(
