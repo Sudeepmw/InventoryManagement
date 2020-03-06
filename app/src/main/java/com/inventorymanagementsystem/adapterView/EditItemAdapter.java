@@ -97,6 +97,10 @@ public class EditItemAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(cnt, AdminDashBoardActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                cnt.startActivity(intent);
+
                 id=tv_price.getTag().toString();
                 submitdata(id);
             }
@@ -116,7 +120,7 @@ public class EditItemAdapter extends BaseAdapter {
             public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
                 if (response.body().message.equals("true")) {
                     Toast.makeText(cnt, response.body().message, Toast.LENGTH_LONG).show();
-
+                    Intent intent=new Intent(cnt, AdminDashBoardActivity.class);
                     Log.i("msg", "" + response.body().message);
                     ((UpdateItemsActivity)cnt).finish();
 

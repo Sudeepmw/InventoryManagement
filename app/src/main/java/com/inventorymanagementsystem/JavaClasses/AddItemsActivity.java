@@ -96,6 +96,7 @@ public class AddItemsActivity extends AppCompatActivity implements EasyPermissio
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 if (et_goods_name.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Enter Goods name", Toast.LENGTH_SHORT).show();
@@ -105,6 +106,11 @@ public class AddItemsActivity extends AppCompatActivity implements EasyPermissio
                     Toast.makeText(getApplicationContext(), "Enter Price", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (Integer.parseInt(et_price.getText().toString())==0) {
+                    Toast.makeText(getApplicationContext(), "Enter Price", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (et_quantity.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Enter Quantity", Toast.LENGTH_SHORT).show();
                     return;
