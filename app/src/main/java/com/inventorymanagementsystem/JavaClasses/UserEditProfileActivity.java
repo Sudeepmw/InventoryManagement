@@ -1,7 +1,9 @@
 package com.inventorymanagementsystem.JavaClasses;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -266,9 +268,34 @@ public class UserEditProfileActivity extends AppCompatActivity {
                 return true;
 
             case R.id.idlogout:
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-                finish();
+                final AlertDialog.Builder builder = new AlertDialog.Builder(UserEditProfileActivity.this);
+                builder.setMessage("Are you sure you want to logout?");
+                builder.setCancelable(true);
+                builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        progressDialog = new ProgressDialog(UserEditProfileActivity.this);
+                        progressDialog.setMessage("logging out....");
+                        progressDialog.show();
+
+                        Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                        progressDialog.cancel();
+                        startActivity(i);
+                        finish();
+
+                    }
+                });
+
+                builder.setPositiveButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
 
                 return true;
             default:

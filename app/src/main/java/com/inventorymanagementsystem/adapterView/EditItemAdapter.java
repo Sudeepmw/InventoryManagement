@@ -1,6 +1,7 @@
 package com.inventorymanagementsystem.adapterView;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,7 +18,9 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.inventorymanagementsystem.InventoryEndURL;
 import com.inventorymanagementsystem.JavaClasses.AdminDashBoardActivity;
+import com.inventorymanagementsystem.JavaClasses.EditItemActivity;
 import com.inventorymanagementsystem.JavaClasses.Items;
+import com.inventorymanagementsystem.JavaClasses.MainActivity;
 import com.inventorymanagementsystem.JavaClasses.UpdateItemsActivity;
 import com.inventorymanagementsystem.R;
 import com.inventorymanagementsystem.ResponseData;
@@ -30,6 +33,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 public class EditItemAdapter extends BaseAdapter {
     List<Items> ar;
+    ProgressDialog progressDialog;
+
     Context cnt;
     String id;
     String url="http://inventoryandorderingapp.com/InventoryManagementSystem/";
@@ -80,7 +85,7 @@ public class EditItemAdapter extends BaseAdapter {
         btn_Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(cnt, AdminDashBoardActivity.class);
+                Intent intent=new Intent(cnt, EditItemActivity.class);
                 intent.putExtra("item_name", ar.get(pos).getItem_name());
                 intent.putExtra("item_price", ar.get(pos).getPrice());
                 intent.putExtra("item_id", ar.get(pos).getId());
@@ -96,13 +101,37 @@ public class EditItemAdapter extends BaseAdapter {
         btn_Delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(((UpdateItemsActivity)cnt));
+                builder.setMessage("Are you sure you want to delete the item?");
+                builder.setCancelable(true);
+                builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        progressDialog = new ProgressDialog((UpdateItemsActivity)cnt);
+                        progressDialog.setMessage("Deleting....");
+                        progressDialog.show();
+                        Intent intent = new Intent(cnt, AdminDashBoardActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        cnt.startActivity(intent);
 
-                Intent intent = new Intent(cnt, AdminDashBoardActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                cnt.startActivity(intent);
+                        id=tv_price.getTag().toString();
+                        submitdata(id);
 
-                id=tv_price.getTag().toString();
-                submitdata(id);
+
+                    }
+                });
+
+                builder.setPositiveButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+
             }
         });
 

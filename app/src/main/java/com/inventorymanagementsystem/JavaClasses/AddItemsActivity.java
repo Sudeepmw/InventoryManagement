@@ -3,8 +3,10 @@ package com.inventorymanagementsystem.JavaClasses;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
@@ -130,9 +132,35 @@ public class AddItemsActivity extends AppCompatActivity implements EasyPermissio
                 return true;
 
             case R.id.idlogout:
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-                finish();
+                final AlertDialog.Builder builder = new AlertDialog.Builder(AddItemsActivity.this);
+                builder.setMessage("Are you sure you want to logout?");
+                builder.setCancelable(true);
+                builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        progressDialog = new ProgressDialog(AddItemsActivity.this);
+                        progressDialog.setMessage("logging out....");
+                        progressDialog.show();
+
+                        Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                        progressDialog.cancel();
+                        startActivity(i);
+                        finish();
+
+                    }
+                });
+
+                builder.setPositiveButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+
 
                 return true;
             default:
