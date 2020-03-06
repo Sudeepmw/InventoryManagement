@@ -24,19 +24,19 @@
 
         <TextView
             android:id="@+id/tv_item_name"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tv_price"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tv_quantity"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

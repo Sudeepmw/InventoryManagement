@@ -21,24 +21,24 @@
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/tv_quantity"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/tv_price"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/tv_order_date"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/tv_status"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

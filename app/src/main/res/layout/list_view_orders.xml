@@ -17,25 +17,26 @@
 
         <TextView
             android:id="@+id/tv_order_id"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/tv_order_created_by"
             android:layout_width="match_parent"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/tv_item_name"
             android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/tv_quantity"
             android:visibility="gone"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <TextView
@@ -48,14 +49,14 @@
         <TextView
             android:id="@+id/tv_restaurent_name"
             android:visibility="gone"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/tv_order_date"
             android:visibility="gone"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -64,7 +65,7 @@
 
         <RelativeLayout
             android:visibility="gone"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
