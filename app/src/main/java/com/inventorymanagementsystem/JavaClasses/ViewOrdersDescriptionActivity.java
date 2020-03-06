@@ -21,7 +21,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ViewOrdersStatusAdmin extends AppCompatActivity {
+public class ViewOrdersDescriptionActivity extends AppCompatActivity {
     TextView tv_order_id,tv_item_name,tv_quantity,tv_price,tv_restaurent_name,tv_order_date,tv_order_created_by;
     Button btn_deliver,btn_not_deliver;
     @Override
@@ -34,7 +34,7 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         tv_order_id=(TextView)findViewById(R.id.tv_order_id);
-         tv_item_name=(TextView)findViewById(R.id.tv_item_name);
+        tv_item_name=(TextView)findViewById(R.id.tv_item_name);
         tv_quantity=(TextView)findViewById(R.id.tv_quantity);
         tv_price=(TextView)findViewById(R.id.tv_price);
         tv_restaurent_name=(TextView)findViewById(R.id.tv_restaurent_name);
@@ -44,7 +44,7 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
         btn_deliver=(Button)findViewById(R.id.btn_deliver);
         btn_not_deliver=(Button)findViewById(R.id.btn_not_deliver);
 
-        Typeface fontstyle=Typeface.createFromAsset(ViewOrdersStatusAdmin.this.getAssets(),"fonts/Lato-Medium.ttf");
+        Typeface fontstyle=Typeface.createFromAsset(ViewOrdersDescriptionActivity.this.getAssets(),"fonts/Lato-Medium.ttf");
         btn_not_deliver.setTypeface(fontstyle);
         btn_deliver.setTypeface(fontstyle);
         tv_item_name.setTypeface(fontstyle);
@@ -53,15 +53,15 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
         tv_restaurent_name.setTypeface(fontstyle);
         tv_order_created_by.setTypeface(fontstyle);
 
-        Typeface orderid=Typeface.createFromAsset(ViewOrdersStatusAdmin.this.getAssets(),"fonts/Roboto-Bold.ttf");
+        Typeface orderid=Typeface.createFromAsset(ViewOrdersDescriptionActivity.this.getAssets(),"fonts/Roboto-Bold.ttf");
         tv_order_id.setTypeface(fontstyle);
 
         tv_order_id.setText("Order ID  :"+getIntent().getStringExtra("OrderID"));
-        tv_item_name.setText("Item Name  :"+getIntent().getStringExtra("IteamName"));
+        tv_item_name.setText("Items  :"+getIntent().getStringExtra("IteamName"));
         tv_quantity.setText("Quantity  :"+getIntent().getStringExtra("Quantity"));
-        tv_price.setText("Price  :"+"$"+getIntent().getStringExtra("Price"));
-        tv_order_date.setText("Price  :"+getIntent().getStringExtra("OrderDate"));
-        tv_restaurent_name.setText("Restaurent Name  :"+getIntent().getStringExtra("RestaurentName"));
+        tv_price.setText("Total Price: "+"$"+getIntent().getStringExtra("Price"));
+        tv_order_date.setText("Ordered Date  :"+getIntent().getStringExtra("OrderDate"));
+        tv_restaurent_name.setText("Restaurant Name  :"+getIntent().getStringExtra("RestaurentName"));
         tv_order_created_by.setText("Ordered By  :"+getIntent().getStringExtra("CreatedBy"));
 
 
@@ -70,9 +70,9 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 submitData(getIntent().getStringExtra("OrderID"),"Delivered");
-                Toast.makeText(ViewOrdersStatusAdmin.this,"Delivered status is updated successfully.",Toast.LENGTH_LONG).show();
-                //((ViewOrdersAdminActivity)cnt).finish();
-                ViewOrdersStatusAdmin.this.finish();
+                Toast.makeText(ViewOrdersDescriptionActivity.this,"Delivered status is updated successfully.",Toast.LENGTH_LONG).show();
+                //((ViewOrdersActivity)cnt).finish();
+                ViewOrdersDescriptionActivity.this.finish();
             }
         });
 
@@ -81,15 +81,15 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 submitData(getIntent().getStringExtra("OrderID"),"Out of Stock");
-                Toast.makeText(ViewOrdersStatusAdmin.this,"Out Of Stock status is updated successfully.",Toast.LENGTH_LONG).show();
-                //((ViewOrdersAdminActivity)cnt).finish();
-                ViewOrdersStatusAdmin.this.finish();
+                Toast.makeText(ViewOrdersDescriptionActivity.this,"Out Of Stock status is updated successfully.",Toast.LENGTH_LONG).show();
+                //((ViewOrdersActivity)cnt).finish();
+                ViewOrdersDescriptionActivity.this.finish();
             }
         });
     }
     ProgressDialog progressDialog;
     private void submitData(String id,String status) {
-        progressDialog = new ProgressDialog(ViewOrdersStatusAdmin.this);
+        progressDialog = new ProgressDialog(ViewOrdersDescriptionActivity.this);
         progressDialog.setMessage("Loading....");
         progressDialog.show();
 
@@ -102,7 +102,7 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
                     progressDialog.dismiss();
                 }
                 else {
-                    Toast.makeText(ViewOrdersStatusAdmin.this, response.body().message, Toast.LENGTH_LONG).show();
+                    Toast.makeText(ViewOrdersDescriptionActivity.this, response.body().message, Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -110,7 +110,7 @@ public class ViewOrdersStatusAdmin extends AppCompatActivity {
             @Override
             public void onFailure(Call<ResponseData> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(ViewOrdersStatusAdmin.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(ViewOrdersDescriptionActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -24,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ViewOrdersAdminActivity extends AppCompatActivity {
+public class ViewOrdersActivity extends AppCompatActivity {
     ListView list_view;
     ProgressDialog progressDialog;
     List<ViewOrders> a1;
@@ -45,7 +45,7 @@ public class ViewOrdersAdminActivity extends AppCompatActivity {
         serverData();
     }
     public void serverData(){
-        progressDialog = new ProgressDialog(ViewOrdersAdminActivity.this);
+        progressDialog = new ProgressDialog(ViewOrdersActivity.this);
         progressDialog.setMessage("Loading....");
         progressDialog.show();
 
@@ -56,17 +56,17 @@ public class ViewOrdersAdminActivity extends AppCompatActivity {
             public void onResponse(Call<List<ViewOrders>> call, Response<List<ViewOrders>> response) {
                 progressDialog.dismiss();
                 if(response.body()==null){
-                    Toast.makeText(ViewOrdersAdminActivity.this,"No data found",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ViewOrdersActivity.this,"No data found",Toast.LENGTH_SHORT).show();
                 }else {
                     a1 = response.body();
-                    list_view.setAdapter(new ViewOrdersAdapter(a1, ViewOrdersAdminActivity.this));
+                    list_view.setAdapter(new ViewOrdersAdapter(a1, ViewOrdersActivity.this));
                 }
             }
 
             @Override
             public void onFailure(Call<List<ViewOrders>> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(ViewOrdersAdminActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ViewOrdersActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
         });
     }

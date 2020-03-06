@@ -57,19 +57,19 @@ public class ReceivedGoodsAdapter extends BaseAdapter {
         tv_quantity.setText("Quantity  :"+ar.get(pos).quantity);
 
         TextView tv_price=(TextView)obj2.findViewById(R.id.tv_price);
-        tv_price.setText("Price  :"+"$"+ar.get(pos).getPrice());
+        tv_price.setText("Total Price :"+"$"+ar.get(pos).getPrice());
 
         TextView tv_restaurant_name=(TextView)obj2.findViewById(R.id.tv_restaurant_name);
-        tv_restaurant_name.setText("Restaurent Name  :"+ar.get(pos).getRestaurant_name());
+        tv_restaurant_name.setText("Restaurant Name  :"+ar.get(pos).getRestaurant_name());
 
 
 
 
         TextView tv_order_date=(TextView)obj2.findViewById(R.id.tv_order_date);
-        tv_order_date.setText(" Date  :"+ar.get(pos).getOrder_date());
+        tv_order_date.setText("Ordered Date  :"+ar.get(pos).getOrder_date());
 
         TextView tv_status=(TextView)obj2.findViewById(R.id.tv_status);
-        tv_status.setText(" Status Of Order  :"+ar.get(pos).getStatus());
+        tv_status.setText("Status of your Order  :"+ar.get(pos).getStatus());
 
         Button btn_reorder=(Button)obj2.findViewById(R.id.btn_reorder);
         btn_reorder.setOnClickListener(new View.OnClickListener() {

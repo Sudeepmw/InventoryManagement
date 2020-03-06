@@ -54,14 +54,14 @@ public class ViewAllMyOrdersAdapter extends BaseAdapter {
         tv_quantity.setText("Quantity  :"+ar.get(pos).quantity);
 
         TextView tv_price=(TextView)obj2.findViewById(R.id.tv_price);
-        tv_price.setText("Price  :"+"$"+ar.get(pos).getPrice());
+        tv_price.setText("Total Price: "+"$"+ar.get(pos).getPrice());
 
 
         TextView tv_order_date=(TextView)obj2.findViewById(R.id.tv_order_date);
-        tv_order_date.setText("Date  :"+ar.get(pos).getOrder_date());
+        tv_order_date.setText("Ordered Date: "+ar.get(pos).getOrder_date());
 
         TextView tv_status=(TextView)obj2.findViewById(R.id.tv_status);
-        tv_status.setText("Status Of Order  :"+ar.get(pos).getStatus());
+        tv_status.setText("Status Of Your Order  :"+ar.get(pos).getStatus());
 
         Typeface fontstyle=Typeface.createFromAsset(cnt.getAssets(),"fonts/Lato-Medium.ttf");
         tv_item_name.setTypeface(fontstyle);

@@ -40,7 +40,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {
         cd_view_orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(AdminDashBoardActivity.this, ViewOrdersAdminActivity.class);
+                Intent intent=new Intent(AdminDashBoardActivity.this, ViewOrdersActivity.class);
                 startActivity(intent);
             }
         });

@@ -179,7 +179,7 @@ public class UserEditProfileActivity extends AppCompatActivity {
                 if (et_email.getText().toString().trim().matches(emailPattern)) {
                     //  Toast.makeText(getApplicationContext(),"Profile Updated Successfully",Toast.LENGTH_SHORT).show();
 
-                    submitData();
+
                 }
 
                 else {

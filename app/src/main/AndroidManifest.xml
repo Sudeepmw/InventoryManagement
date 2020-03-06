@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".JavaClasses.DeliveredItemsAdminActivity" />
-        <activity android:name=".JavaClasses.ViewOrdersAdminActivity" />
+        <activity android:name=".JavaClasses.ViewOrdersActivity" />
         <activity android:name=".JavaClasses.AdminDashBoardActivity" />
         <activity android:name=".JavaClasses.NotReceivedGoodsActivity" />
         <activity android:name=".JavaClasses.ReceivedGoodsActivity" />
@@ -43,7 +43,7 @@
         <activity android:name=".JavaClasses.StartNewOrderActivity"></activity>
         <activity android:name=".JavaClasses.NewOrdersActivity"></activity>
         <activity android:name=".JavaClasses.ReorderActivity"></activity>
-        <activity android:name=".JavaClasses.ViewOrdersStatusAdmin"></activity>
+        <activity android:name=".JavaClasses.ViewOrdersDescriptionActivity"></activity>
     </application>
 
 </manifest>
