@@ -77,7 +77,7 @@ public class UserRegistrationActivity extends AppCompatActivity {
                 }
 
                 if (et_phno.getText().toString().isEmpty()|| et_phno.length()>10 ||et_phno.length()<10) {
-                    Toast.makeText(getApplicationContext(), "Phone Number Should not be Empty or Invalid", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Phone Number ", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -105,9 +105,9 @@ public class UserRegistrationActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Passwords does not match", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                else if (et_email.getText().toString().trim().matches(emailPattern)) {
+                if (et_email.getText().toString().trim().matches(emailPattern)) {
                     // Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
-                    submitData();
+
 
                 }
 
@@ -119,6 +119,10 @@ public class UserRegistrationActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Pincode Should not be Empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (et_restaurent.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Restaurant Name Should not be Empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (et_locality.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Locality Should not be Empty", Toast.LENGTH_SHORT).show();
                     return;
@@ -127,7 +131,8 @@ public class UserRegistrationActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Shipping Address Should not be Empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                // finish();
+                submitData();
+                 finish();
 
             }
         });

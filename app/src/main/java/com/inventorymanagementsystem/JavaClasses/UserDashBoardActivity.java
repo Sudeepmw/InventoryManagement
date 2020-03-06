@@ -39,7 +39,7 @@ public class UserDashBoardActivity extends AppCompatActivity {
             st = getIntent().getExtras().getString("Welcome");
             txt.setText("Welcome "+st +"!");
         }else{
-            txt.setText("'Thank You for your Order'");
+            txt.setText(" ");
 
         }
         cd_new_order=(CardView) findViewById(R.id.cd_new_order);
@@ -111,6 +111,7 @@ public class UserDashBoardActivity extends AppCompatActivity {
                         progressDialog.show();
 
                         Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                        progressDialog.cancel();
                         startActivity(i);
                         finish();
 

@@ -1,6 +1,8 @@
 package com.inventorymanagementsystem.adapterView;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,12 +16,12 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.inventorymanagementsystem.InventoryEndURL;
+import com.inventorymanagementsystem.JavaClasses.AdminDashBoardActivity;
+import com.inventorymanagementsystem.JavaClasses.Items;
+import com.inventorymanagementsystem.JavaClasses.UpdateItemsActivity;
 import com.inventorymanagementsystem.R;
 import com.inventorymanagementsystem.ResponseData;
 import com.inventorymanagementsystem.RetrofitInstance;
-import com.inventorymanagementsystem.JavaClasses.EditItemActivity;
-import com.inventorymanagementsystem.JavaClasses.UpdateItemsActivity;
-import com.inventorymanagementsystem.JavaClasses.Items;
 
 import java.util.List;
 
@@ -78,7 +80,7 @@ public class EditItemAdapter extends BaseAdapter {
         btn_Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(cnt, EditItemActivity.class);
+                Intent intent=new Intent(cnt, AdminDashBoardActivity.class);
                 intent.putExtra("item_name", ar.get(pos).getItem_name());
                 intent.putExtra("item_price", ar.get(pos).getPrice());
                 intent.putExtra("item_id", ar.get(pos).getId());
@@ -94,6 +96,7 @@ public class EditItemAdapter extends BaseAdapter {
         btn_Delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 id=tv_price.getTag().toString();
                 submitdata(id);
             }

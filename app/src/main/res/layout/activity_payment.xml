@@ -38,7 +38,7 @@
     <TextView
         android:id="@+id/tv_dob"
         android:hint="Select Date"
-        android:padding="6dp"
+        android:padding="12dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/edittext_rounded"
@@ -59,7 +59,7 @@
         android:id="@+id/et_restaurent"
         android:background="@drawable/edittext_rounded"
         android:hint="Restaurant Name "
-        android:padding="8dp"
+        android:padding="12dp"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
@@ -67,19 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!--<TextView
-        android:id="@+id/tv_restaurent_name"
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
 
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />-->
 
     <RadioGroup
         android:layout_width="match_parent"

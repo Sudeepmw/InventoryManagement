@@ -125,7 +125,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:background="@drawable/edittext_rounded"
         android:hint="Password"
         android:singleLine="true"
-
+        android:inputType="textPassword"
         android:padding="13dp"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="13dp"
@@ -134,7 +134,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/tv9"
-        android:text="Password"
+        android:text="Confirm Password"
         android:textSize="16dp"
         android:textColor="#303F9F"
         android:layout_marginTop="14dp"
@@ -146,9 +146,9 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <EditText
         android:id="@+id/et_conpassword"
         android:background="@drawable/edittext_rounded"
-        android:hint="Password"
+        android:hint="Confirm Password"
         android:singleLine="true"
-
+        android:inputType="textPassword"
         android:padding="13dp"
         android:layout_marginTop="4dp"
         android:layout_marginLeft="13dp"
