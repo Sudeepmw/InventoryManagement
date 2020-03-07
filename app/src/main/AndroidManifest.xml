@@ -7,10 +7,10 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/iconn"
+        android:icon="@mipmap/inventory"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@drawable/iconn"
+        android:roundIcon="@mipmap/inventory"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".JavaClasses.MainActivity"></activity>
