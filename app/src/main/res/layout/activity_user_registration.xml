@@ -50,7 +50,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:background="@drawable/edittext_rounded"
         android:hint="Mobile Number"
         android:singleLine="true"
-
+        android:maxLength="10"
         android:inputType="number"
         android:padding="13dp"
         android:layout_marginTop="4dp"

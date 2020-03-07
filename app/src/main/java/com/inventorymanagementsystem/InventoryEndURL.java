@@ -30,7 +30,7 @@ public interface InventoryEndURL {
             @Query("uname1") String uname1,
 
             @Query("pwd1") String pwd,
-            @Query("pincode") String pincode,
+            @Query("postalcode") String pincode,
             @Query("locality") String locality,
             @Query("shipping_address") String shipping_address,
             @Query("res") String res
