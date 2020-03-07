@@ -83,7 +83,7 @@ public class PaymentActivity extends AppCompatActivity {
                 builder.setNegativeButton("Place order!", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         submitData();
-                        Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                        Intent i=new Intent(getApplicationContext(),UserDashBoardActivity.class);
                         startActivity(i);
                         finish();
                     }
