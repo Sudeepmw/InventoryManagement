@@ -166,11 +166,11 @@ public class UserEditProfileActivity extends AppCompatActivity {
                 }
 
                 if (et_password.getText().toString().isEmpty()|| et_password.length()<8) {
-                    Toast.makeText(getApplicationContext(), "Password Should have 8 characters", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Password Should have minimum'8'characters", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (et_cpassword.getText().toString().isEmpty()|| et_password.length()<8) {
-                    Toast.makeText(getApplicationContext(), "Passwords Should have 8 characters", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Password Should have minimum'8'characters", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (!et_password.getText().toString().equals( et_cpassword.getText().toString()) ) {
