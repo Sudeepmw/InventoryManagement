@@ -42,7 +42,7 @@ public class ReceivedGoodsActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(Utils.SHREF, Context.MODE_PRIVATE);
         uname = sharedPreferences.getString("user_name", "");
 
-        getSupportActionBar().setTitle("Delivered Goods");
+        getSupportActionBar().setTitle("Notifications");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

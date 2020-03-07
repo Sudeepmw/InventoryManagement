@@ -23,7 +23,6 @@ import java.util.Random;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 public class ForgetPasswordActivity extends AppCompatActivity {
     EditText et_email,et_otp,et_pwd,et_username;
     Button btn_submit,btn_otp,btn_pwd;
@@ -57,14 +56,15 @@ public class ForgetPasswordActivity extends AppCompatActivity {
     public  void submitdata()
     {
         String email=et_email.getText().toString();
+        String uname=et_username.getText().toString();
         InventoryEndURL apiService = RetrofitInstance.getRetrofitInstance().create(InventoryEndURL.class);
         Call<ResponseData> call = apiService.forgotPassword(email,uname);
         call.enqueue(new Callback<ResponseData>() {
             @Override
             public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
-                if (response.body().message.equals("true")) {
+                if (response.body().status.equals("true")) {
                     Toast.makeText(ForgetPasswordActivity.this, response.body().message, Toast.LENGTH_LONG).show();
-                    Log.i("msg", "" + response.body().message);
+                    // Log.i("msg", "" + response.body().message);
                     finish();
                 } else {
                     Toast.makeText(ForgetPasswordActivity.this, response.body().message, Toast.LENGTH_LONG).show();
@@ -77,6 +77,9 @@ public class ForgetPasswordActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 
     public void randomnum()
     {

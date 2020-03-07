@@ -36,7 +36,7 @@ public class ViewOrdersActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_orders);
-        getSupportActionBar().setTitle("View Orders");
+        getSupportActionBar().setTitle("Active Orders");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

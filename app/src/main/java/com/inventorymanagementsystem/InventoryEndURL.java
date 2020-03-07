@@ -117,7 +117,7 @@ public interface InventoryEndURL {
             @Query("id") String id,
             @Query("status") String status
     );
-    @GET("InventoryManagementSystem/getUseforgotPasswordrProfile.php")
+    @GET("InventoryManagementSystem/forgotPassword.php")
     Call<ResponseData> forgotPassword(
             @Query("emailid") String emailid,
             @Query("uname") String uname

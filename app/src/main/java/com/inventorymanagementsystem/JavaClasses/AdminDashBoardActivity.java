@@ -28,7 +28,7 @@ public class AdminDashBoardActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admindashboard);
-        getSupportActionBar().setTitle("Admin DashBoard");
+        getSupportActionBar().setTitle("Administrator DashBoard");
 
         btn_logout=(Button)findViewById(R.id.btn_logout);
         cd_view_orders=(CardView)findViewById(R.id.cd_view_orders);
