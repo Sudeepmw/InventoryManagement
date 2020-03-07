@@ -192,6 +192,10 @@ public class UserEditProfileActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Pincode Should not be Empty", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (et_getres.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Restaurant name Should not be Empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (et_locality.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Locality Should not be Empty", Toast.LENGTH_SHORT).show();
                     return;

@@ -37,6 +37,7 @@
         android:id="@+id/tv_price"
         android:text="Price"
         android:textColor="#A76464"
+
         android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
